@@ -337,3 +337,21 @@ p {
     border: 2px solid white; /* Adjust the border width as needed */
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .footer a:hover {
+    color: #6c6c6c; /* No color change on hover */
+    text-decoration: none; /* Remove underline or any other hover effect */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer a {
+    margin-right: 15px; /* Adds space between the links */
+  }
+
+  .footer a:hover {
+    color: #6c6c6c; /* No color change on hover */
+    text-decoration: none; /* Remove underline or any other hover effect */
+  }
+}
