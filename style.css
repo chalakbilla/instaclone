@@ -261,6 +261,24 @@ p {
     text-decoration: underline;
 
   }
+  a {
+    padding: 8px 10px;
+    color: #6c6c6c; /* Your desired color */
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: #6c6c6c; /* Ensure visited links have the same color */
+  }
+  
+  a:hover {
+    color: #555; /* Change to a different color when hovered, if you like */
+  }
+  
+  a:active {
+    color: #6c6c6c; /* Ensure active links have the same color */
+  }
+  
 }
 
 .Language {
